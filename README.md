@@ -17,16 +17,23 @@ This app allows users to find the seat on a train bogey based on their ticket nu
 
 ## Demo
 
-[![Train Seat F
-   inder](https://img.youtube.com/vi/9Z3Z4X6Z5ZI/0.jpg)](https://youtube.com/shorts/R3lUYNMvIiA?feature=share)
+
+https://github.com/mazam5/TrainSeatFinderFlutterApp/assets/33384508/e8894ec7-0f41-4087-a345-ab31d3162e51
+
+
 
 ## Screenshots
 
-Initial Screen
+1. Initial Screen
+
 ![Screenshot 1](/screenshots/1.png)
-Searching for seat
+
+2. Searching for seat
+
 ![Screenshot 2](/screenshots/2.png)
-Seat found
+
+3. Seat found
+
 ![Screenshot 3](/screenshots/3.png)
 
 ## Methodology

@@ -17,26 +17,40 @@ This app allows users to find the seat on a train bogey based on their ticket nu
 
 ## Demo
 
-
 https://github.com/mazam5/TrainSeatFinderFlutterApp/assets/33384508/e8894ec7-0f41-4087-a345-ab31d3162e51
 
-
+<video width="320" height="240" controls>
+  <source src="/demo/demo.mp4" type="video/mp4">
+</video>
 
 ## Screenshots
 
-1. Initial Screen
-
-![Screenshot 1](/screenshots/1.png)
-
-2. Searching for seat
-
-![Screenshot 2](/screenshots/2.png)
-
-3. Seat found
-
-![Screenshot 3](/screenshots/3.png)
+<table>
+   <tr>
+      <td>Initial Screen</td>
+      <td>Searching for seat</td>
+      <td>Seat found</td>
+   </tr>
+  <tr>
+    <td><img src="screenshots/1.png" alt="Image 1"></td>
+    <td><img src="screenshots/2.png" alt="Image 2"></td>
+    <td><img src="screenshots/3.png" alt="Image 3"></td>
+  </tr>
+</table>
 
 ## Methodology
+
+Build a simple UI with a TextFormField and a ElevatedButton widget. When the user enters a seat number and clicks on the button, the seat with the entered number and it shows a green colored box.
+
+Widget used:
+
+- SeatFinderWidget (StatefulWidget) - This widget contains Search widget and a SizedBox. When the user clicks on the button, the seat number is passed to the AllSeatsWidget to find the seat.
+
+- SearchWidget (StatefulWidget) - This widget contains a TextFormField and a ElevatedButton widget. When the user clicks on the button, the seat number is passed to the AllSeatsWidget to find the seat.
+
+- AllSeatsWidget (StatefulWidget) - This widget contains a ListView widget which displays the outlines of the seats.
+
+- SeatTile (StatelessWidget) - This widget defines the UI of the seat. It contains a Container widget with a Text widget inside it.
 
 ## Installation
 

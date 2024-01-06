@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'search.dart';
+import 'seats.dart';
 
 class SeatFinderWidget extends StatefulWidget {
   const SeatFinderWidget({super.key, required this.title});
@@ -16,7 +17,25 @@ class _SeatFinderWidgetState extends State<SeatFinderWidget> {
   onFind() {
     setState(() {
       searchSeat = int.parse(searchController.text);
+      scrollToSearchSeat();
     });
+  }
+
+  late ScrollController _scrollController;
+
+  @override
+  void initState() {
+    super.initState();
+    _scrollController = ScrollController();
+  }
+
+  void scrollToSearchSeat() {
+    int index = ((searchSeat - 1) / 8).floor();
+
+    if (index >= 0) {
+      _scrollController.animateTo(index * 100.0,
+          duration: const Duration(milliseconds: 3000), curve: Curves.ease);
+    }
   }
 
   @override
@@ -36,6 +55,8 @@ class _SeatFinderWidgetState extends State<SeatFinderWidget> {
                 onFind: onFind,
                 context: context,
               ),
+              const SizedBox(height: 10),
+             
             ],
           ),
         ),

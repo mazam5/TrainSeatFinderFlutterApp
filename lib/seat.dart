@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class SeatTile extends StatelessWidget {
   final String seatNumber;
   final String seatType;
@@ -9,18 +8,18 @@ class SeatTile extends StatelessWidget {
   final Color backgroundColor;
 
   const SeatTile({
-    Key? key,
+    super.key,
     required this.seatNumber,
     required this.seatType,
     required this.isSearchSeat,
     required this.backgroundColor,
     required this.side,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 70,
+      width: 68,
       decoration: BoxDecoration(
         borderRadius: side == "UP"
             ? const BorderRadius.vertical(

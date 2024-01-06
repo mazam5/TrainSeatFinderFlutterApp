@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'search.dart';
-import 'seats.dart';
+import 'all_seats.dart';
 
 class SeatFinderWidget extends StatefulWidget {
   const SeatFinderWidget({super.key, required this.title});
@@ -33,7 +33,7 @@ class _SeatFinderWidgetState extends State<SeatFinderWidget> {
     int index = ((searchSeat - 1) / 8).floor();
 
     if (index >= 0) {
-      _scrollController.animateTo(index * 100.0,
+      _scrollController.animateTo(index * 115.0,
           duration: const Duration(milliseconds: 3000), curve: Curves.ease);
     }
   }
@@ -57,7 +57,7 @@ class _SeatFinderWidgetState extends State<SeatFinderWidget> {
               ),
               const SizedBox(height: 10),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.75,
+                height: MediaQuery.of(context).size.height * 0.78,
                 child: ListView.builder(
                   itemCount: 9,
                   controller: _scrollController,

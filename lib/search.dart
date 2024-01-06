@@ -5,11 +5,11 @@ class SearchWidget extends StatefulWidget {
   final TextEditingController searchController;
   final BuildContext context;
   const SearchWidget({
-    Key? key,
+    super.key,
     required this.onFind,
     required this.searchController,
     required this.context,
-  }) : super(key: key);
+  });
   @override
   State<SearchWidget> createState() => _SearchWidgetState();
 }
@@ -25,6 +25,12 @@ class _SearchWidgetState extends State<SearchWidget> {
             child: TextFormField(
               controller: widget.searchController,
               keyboardType: TextInputType.number,
+              textInputAction: TextInputAction.search,
+              onFieldSubmitted: (value) {
+                if (widget.searchController.text.isNotEmpty) {
+                  widget.onFind();
+                }
+              },
               validator: (value) {
                 if (value == null || value.isEmpty) {
                   return 'Please enter seat number';

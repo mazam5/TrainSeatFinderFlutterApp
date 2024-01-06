@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'seat.dart';
+
 class SeatsWidget extends StatefulWidget {
   final int seat1, seat2, seat3, seat4, seat5, seat6, seat7, seat8;
   final int searchSeat;

@@ -13,7 +13,7 @@
 ## Description
 
 This is a simple hybrid application that is developed using Flutter Framework.
-This app allows users to find the seat on a train bogey based on their ticket number.
+This app allows users to find the seat location and berth type on a train bogey based on their seat number.
 
 ## Demo
 
@@ -52,13 +52,14 @@ Widget used:
 
 - SeatTile (StatelessWidget) - This widget defines the UI of the seat. It contains a Container widget with a Text widget inside it.
 
+- scrollToSearchController (ScrollController) - This controller is used to scroll to the searched seat when the user clicks on the find button (animateTo).
+
 ## Installation
 
 #### Prerequisites
 
-- Flutter SDK
-- Android Studio
-- Visual Studio Code
+- [Flutter SDK](https://flutter.dev/docs/get-started/install) - Flutter SDK must be installed and configured in your machine
+- [VS Code](https://code.visualstudio.com/) or [Android Studio](https://developer.android.com/studio) or [Xcode](https://developer.apple.com/xcode/)
 
 1. Clone the repository
 
@@ -66,13 +67,23 @@ Widget used:
    git clone https://github.com/mazam5/TrainSeatFinderFlutterApp
    ```
 
-2. Run below command to install flutter packages
+2. Open the project in VS Code or Android Studio or Xcode
+
+   Run below command to install flutter dependency packages
 
    ```
    flutter pub get
    ```
 
-3. Run to start the application
+3. Run below command to check if the device is connected
+
+   Start the emulator or connect the device to your machine
+
+   ```
+   flutter devices
+   ```
+
+4. Run to start the application
 
    ```
    flutter run
@@ -80,9 +91,9 @@ Widget used:
 
 ## Usage
 
-1. Enter the seat number
-2. Click on the `Find` button
-3. The seat number will be displayed
+1. Enter the seat number in the text field.
+2. Click on the `Find` button to find the seat, berth type, and scroll to it.
+3. The seat with the entered number is highlighted with a green color.
 
 ## Author
 

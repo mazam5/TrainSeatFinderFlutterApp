@@ -56,7 +56,27 @@ class _SeatFinderWidgetState extends State<SeatFinderWidget> {
                 context: context,
               ),
               const SizedBox(height: 10),
-             
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.75,
+                child: ListView.builder(
+                  itemCount: 9,
+                  controller: _scrollController,
+                  scrollDirection: Axis.vertical,
+                  itemBuilder: (context, index) {
+                    return SeatsWidget(
+                      seat1: (index * 8) + 1,
+                      seat2: (index * 8) + 2,
+                      seat3: (index * 8) + 3,
+                      seat4: (index * 8) + 4,
+                      seat5: (index * 8) + 5,
+                      seat6: (index * 8) + 6,
+                      seat7: (index * 8) + 7,
+                      seat8: (index * 8) + 8,
+                      searchSeat: searchSeat,
+                    );
+                  },
+                ),
+              ),
             ],
           ),
         ),
